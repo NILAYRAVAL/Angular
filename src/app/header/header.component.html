@@ -1,0 +1,24 @@
+<p>header works!</p>
+<!-- Data flow from component to view template <string, property binding> -->
+<!-- property Binding []="" -->
+
+<img [src]="product.pimage" alt="iphone"/>
+
+<!-- String Binding {{}}  -->
+<h3>name : {{product.name}}</h3>
+<h3>price :  {{ '$' + product.price}}</h3>
+<h3>Color : {{product.color}}</h3>
+<h3>Discount-price : {{'$'+ " "+ (product.price - (product.price * discount /100)) }}</h3>
+<h3>Discount-price : {{discountPrice()}}</h3>
+<h3>Product-Stock : {{product.instock > 0 ? 'only ' + product.instock + ' stock left': 'Empty '}}</h3>
+
+<!-- property Binding []="" -->
+<button [disabled]="!product.instock">Buy Now</button>
+<br/>
+<br/>
+
+<!-- Event Binding ()="" -->
+<!-- Data flow from view template to component class -->
+<button (click)="decrement()"> - </button>
+  <span>{{addvalue}}</span>
+<button (click)="increment()"> +</button>
