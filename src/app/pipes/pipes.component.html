@@ -1,0 +1,42 @@
+<h3>Learn about different use of Pipes(|)</h3>
+<!-- <router-outlet></router-outlet> -->
+<table border ="9">
+    <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>learn</th>
+        <th>Company</th>
+        <th>Salary</th>
+    </tr>
+    <tr>
+        <td> {{name | uppercase}}</td>
+        <td>   {{position }}</td>
+        <td>{{learn}}</td>
+        <td>{{job}}</td>
+        <!-- <td>${{salary}}</td> -->
+        <td>{{salary| currency:"USD":true}}</td>
+    </tr>
+</table>
+
+<h4>{{position|titlecase}}</h4>
+<h4>{{job|slice:5}}</h4>
+<h4>{{job|slice:5:8}}</h4>
+
+<h3>Example of Date with Pipe</h3>
+<h4>{{currentdate}}</h4>
+<h4>ShortDate: {{ currentdate |date: 'shortDate'}}</h4>
+<h4>LongDate: {{currentdate |date: 'longDate'}}</h4>
+<h4>FullDate: {{currentdate |date: 'fullDate'}}</h4>
+
+<h3>Example of Decimal pipe</h3>
+<h4>Number: {{mynumber}}</h4>
+<h4>PipeNumber: {{mynumber| number}}</h4>
+
+<h3>Example of Currency Pipe</h3>
+<h4>Currency: {{mynumber| currency}}</h4>
+<h4>Currency2: {{mynumber| currency:'INR'}}</h4>
+
+<h3>Example of json Pipe</h3>
+<h4>{{example}}</h4>
+<h4>{{example|json}}</h4>
+<h4>{{example|slice:1:3|json}}</h4>
