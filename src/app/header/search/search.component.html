@@ -1,0 +1,8 @@
+<!-- two way Event binding  -->
+
+<!-- Add in app.module.ts -->
+<!-- import { FormsModule } from '@angular/forms'; -->
+<!--  imports: [ FormsModule] -->
+<h3>Search Component works</h3>
+<input type="text" [(ngModel)]="searchbox">
+<p *ngIf="searchbox != ''"><strong>Explore:</strong>{{searchbox}}</p>

@@ -1,0 +1,12 @@
+<h3>Directive Component work</h3>
+<!-- *ngFor use for loop -->
+<p>*ngFor = ""</p>
+<h4 *ngFor="let menu of  mainMenu">{{menu}}</h4>
+
+<p>*ngIf=""</p>
+<input type="text" [(ngModel)] ="searching">
+<h4 *ngIf="searching != ''"><strong>Exploring: </strong> {{searching}}</h4>
+
+<p>[ngStyle]=""</p>
+<h4 [ngStyle]="{color:searching != ''? 'blue': 'green'}">Promount Technology</h4>
+ 
