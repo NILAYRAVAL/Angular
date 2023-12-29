@@ -1,0 +1,57 @@
+<!-- two way Event binding  -->
+
+<!-- Add in app.module.ts -->
+<!-- import { FormsModule } from '@angular/forms'; -->
+<!--  imports: [ FormsModule] -->
+<div [ngStyle]="{marginLeft:'200px'}">
+<h3>Search Component works</h3>
+<input type="text" [(ngModel)]="searchbox">
+<p *ngIf="searchbox != ''"><strong>Explore:</strong>{{searchbox}}</p>
+<button (click)="Onsubscribe()">Subscribe 1</button>
+<button (click)="Onsubscribe2()">Subscribe 2</button>
+<button (click)="Onsubscribe3()">Subscribe 3</button>
+</div>
+<br/>
+<br/>
+
+<!-- <h3 [ngStyle]="{marginLeft:'500px'}">Example of json Pipe</h3>
+<h4 [ngStyle]="{marginLeft:'100px'}">{{example}}</h4>
+<h4>{{example|json}}</h4>
+<h4>{{example|slice:1:3|json}}</h4>
+
+<table border="6" [ngStyle]="{marginLeft:'400px'}">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Status</th>
+    </tr>
+    <tr *ngFor="let user of userData">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.status}}</td>
+    </tr>
+</table>
+<br/>
+
+<h3 [ngStyle]="{marginLeft:'600px'}">Get data from Json-Url</h3>
+<table border="7" [ngStyle]="{marginLeft:'400px'}">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Status</th>
+    </tr>
+    <tr *ngFor="let use of users">
+        <td>{{use.id}}</td>
+        <td>{{use.name}}</td>
+        <td>{{use.email}}</td>
+        <td>{{use.gender}}</td>
+        <td>{{use.status}}</td>
+    </tr>
+</table> -->
+<!-- <router-outlet></router-outlet> -->
