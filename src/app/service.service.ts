@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
+// <<<<<<< Services-Get-Data
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+// =======
+
+// >>>>>>> main
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +16,7 @@ export class ServiceService {
   }
 
 
+// <<<<<<< Services-Get-Data
 
 
 
@@ -23,3 +28,9 @@ export class ServiceService {
   return this.http.get<any>(url);
 }
 }
+// =======
+}
+
+
+
+// >>>>>>> main
