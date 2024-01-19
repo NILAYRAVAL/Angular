@@ -1,19 +1,35 @@
+//<<<<<<< 2-learn-about-data-binding
 <p>header works!</p>
+//=======
+<div>
+<p>Header Component works!</p>
+//>>>>>>> main
 <!-- Data flow from component to view template <string, property binding> -->
 <!-- property Binding []="" -->
 
 <img [src]="product.pimage" alt="iphone"/>
 
 <!-- String Binding {{}}  -->
+//<<<<<<< 2-learn-about-data-binding
 <h3>name : {{product.name}}</h3>
 <h3>price :  {{ '$' + product.price}}</h3>
 <h3>Color : {{product.color}}</h3>
+//=======
+<!-- Pipes(|) -->
+<h3>name : {{product.name | uppercase}}</h3>
+<h3>price  :  {{ '$' + product.price}}</h3>
+<h3>Color : {{product.color | uppercase}}</h3>
+//>>>>>>> main
 <h3>Discount-price : {{'$'+ " "+ (product.price - (product.price * discount /100)) }}</h3>
 <h3>Discount-price : {{discountPrice()}}</h3>
 <h3>Product-Stock : {{product.instock > 0 ? 'only ' + product.instock + ' stock left': 'Empty '}}</h3>
 
 <!-- property Binding []="" -->
+//<<<<<<< 2-learn-about-data-binding
 <button [disabled]="!product.instock">Buy Now</button>
+//=======
+<button [disabled]="!product.instock" (click)="BuyNow()">Buy Now</button>
+//>>>>>>> main
 <br/>
 <br/>
 
@@ -21,4 +37,14 @@
 <!-- Data flow from view template to component class -->
 <button (click)="decrement()"> - </button>
   <span>{{addvalue}}</span>
+//<<<<<<< 2-learn-about-data-binding
 <button (click)="increment()"> +</button>
+//=======
+<button (click)="increment()"> +</button>
+<br/>
+<br/>
+<!-- <search></search> -->
+</div>
+<a [routerLink]= "['/Header1/Search']">Child OF Header</a>
+<router-outlet></router-outlet>
+//>>>>>>> main

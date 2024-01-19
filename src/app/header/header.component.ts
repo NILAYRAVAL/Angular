@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
+//<<<<<<< 2-learn-about-data-binding
+//=======
+import { ServiceService } from '../service.service';
+//>>>>>>> main
 
 @Component({
   selector: 'header',
   templateUrl: './header.component.html',
+//<<<<<<< 2-learn-about-data-binding
   styleUrls: ['./header.component.css']
+//=======
+  styleUrls: ['./header.component.css'],
+  // providers: [ServiceService],
+//>>>>>>> main
 })
 export class HeaderComponent {
 
@@ -33,4 +42,16 @@ discountPrice(){
       this.addvalue++
     }
   }
+//<<<<<<< 2-learn-about-data-binding
+//=======
+  
+  constructor(private search:ServiceService){
+
+  }
+
+  BuyNow(){
+    // let create = new ServiceService();
+   this.search.OnSubscribeClicked('4%');
+  }
+//>>>>>>> main
 }
