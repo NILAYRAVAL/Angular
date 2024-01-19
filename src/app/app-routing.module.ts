@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+//<<<<<<< 2-learn-about-data-binding
+
+const routes: Routes = [];
+//=======
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './header/search/search.component';
 import { FooterComponent } from './footer/footer.component';
@@ -27,6 +31,7 @@ const routes: Routes = [
 {path:'Pipe', component:PipesComponent},
 {path:'**', component: PromountComponent},
 ];
+//>>>>>>> main
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

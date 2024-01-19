@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+//<<<<<<< 2-learn-about-data-binding
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+//=======
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,11 +30,16 @@ import { ServiceService } from './service.service';
 
 // >>>>>>> main
 
+//>>>>>>> main
 
 
 @NgModule({
   declarations: [
     AppComponent,
+//<<<<<<< 2-learn-about-data-binding
+    FooterComponent ,
+    HeaderComponent,
+//=======
 // <<<<<<< Services-Get-Data
     FooterComponent ,
     HeaderComponent,
@@ -43,19 +54,26 @@ import { ServiceService } from './service.service';
     SearchComponent,
    
 // >>>>>>> main
+//>>>>>>> main
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+//<<<<<<< 2-learn-about-data-binding
+      
+  ],
+  providers: [],
+//=======
 // <<<<<<< Services-Get-Data
     FormsModule,
     HttpClientModule,
-=======
+//=======
   
 // >>>>>>> main
   ],
   providers: [ServiceService],
+//>>>>>>> main
   bootstrap: [AppComponent]
 })
 export class AppModule { }
