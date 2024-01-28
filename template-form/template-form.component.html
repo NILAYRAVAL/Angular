@@ -1,0 +1,113 @@
+<!-- <section class="container">
+    <header>Registration Form</header>
+    <form class="form" action="#">
+        <div class="input-box">
+            <label>Full Name</label>
+            <input required="" placeholder="Enter full name" type="text">
+        </div>
+        <div class="column">
+            <div class="input-box">
+              <label>Phone Number</label>
+              <input required="" placeholder="Enter phone number" type="telephone">
+            </div>
+            <div class="input-box">
+              <label>Birth Date</label>
+              <input required="" placeholder="Enter birth date" type="date">
+            </div>
+        </div>
+        <div class="gender-box">
+          <label>Gender</label>
+          <div class="gender-option">
+            <div class="gender">
+              <input checked="" name="gender" id="check-male" type="radio">
+              <label for="check-male">Male</label>
+            </div>
+            <div class="gender">
+              <input name="gender" id="check-female" type="radio">
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input name="gender" id="check-other" type="radio">
+              <label for="check-other">Prefer not to say</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Address</label>
+          <input required="" placeholder="Enter street address" type="text">
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden="">Country</option>
+                <option>INDIA</option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>Germany</option>
+                <option>Japan</option>
+              </select>
+            </div>
+          <input required="" placeholder="Enter your city" type="text">
+          </div>
+        </div>
+        <button>Submit</button>
+    </form>
+  </section> -->
+
+
+
+
+
+<div class="login-box">
+
+    <form (ngSubmit)="OnFormSubmitted(registerForm)" #registerForm="ngForm">
+        <div class="user-box">
+            <input type="text" name="FullName" ngModel required>
+            <label>Full Name :</label>
+        </div>
+
+        <div class="user-box">
+            <input type="email" name="email" ngModel required email>
+            <label>E-mail :</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="password" ngModel required>
+            <label>Password :</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="Enrollment" ngModel required>
+            <label>Enrollment Number</label>
+        </div>
+        <div >
+            <label style="color: aliceblue;">Select Gender :</label>
+
+            <label class="radio-button" *ngFor="let gen of Gender">
+            <input type="radio" [name]="gen.name" [value]="gen.value" ngModel required>
+            <span class="radio"></span>
+            {{gen.display}}
+          </label>
+          
+          <!-- <label class="radio-button">
+            <input type="radio" name="example-radio" value="option2" ngModel>
+            <span class="radio"></span>
+            Female
+          </label>
+          <label class="radio-button">
+            <input type="radio" name="example-radio" value="option2" ngModel>
+            <span class="radio"></span>
+            Other
+          </label> -->
+        </div>
+<br>
+        <div class="user-box">
+            <input type="tel" name="phone" ngModel required>
+            <label>Mobile-NO:</label>
+        </div>
+
+        <a href="#" >
+            <button class="btn" type="submit" [disabled]="registerForm.invalid">SUBMIT</button>
+        <!-- <input type="submit" name="" required=""> -->
+          
+            <span></span>
+        </a>
+    </form>
+</div>
